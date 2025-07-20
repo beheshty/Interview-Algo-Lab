@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Algorithms.Core.Sorting
+﻿namespace Algorithms.Core.Sorting
 {
     public static class BubbleSort
     {
@@ -55,6 +49,7 @@ namespace Algorithms.Core.Sorting
                 }
 
                 Console.WriteLine("Final sorted array: " + string.Join(", ", arr));
+                Console.WriteLine();
             }
         }
     }
