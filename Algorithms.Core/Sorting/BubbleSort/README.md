@@ -13,7 +13,16 @@
 
 Bubble Sort is a simple sorting algorithm that works by **repeatedly stepping through the list**, **comparing adjacent elements**, and **swapping them if they are in the wrong order**.
 
-With each pass through the list, the largest unsorted element "bubbles up" to its correct position.
+The algorithm works by making multiple passes through an array. On each pass, it compares each pair of adjacent items and swaps them if they are in the wrong order. After the first pass, the largest element will have "bubbled up" to the end of the array. After the second pass, the second-largest element will be in its correct position, and so on. This process continues until no swaps are needed during a full pass, indicating the array is sorted.
+
+1. Start at the beginning of the array.
+2. Compare the first element with the second.
+3. Swap them if the first is greater than the second.
+4. Move to the next pair of elements and repeat the comparison and potential swap.
+5. Continue this process until the end of the array. This completes one full pass.
+6. Repeat the entire process for `n-1` passes, where `n` is the number of elements.
+
+An important optimization is to stop the algorithm early if a full pass is completed with no swaps, as this means the array is already sorted.
 
 ---
 
@@ -32,7 +41,6 @@ Given the array:
 
 **End of Pass 1**: Largest number `8` is in its final place.
 
----
 
 ### 🔄 Pass 2:
 - Compare 1 and 4 → No Swap  
@@ -41,7 +49,6 @@ Given the array:
 
 **End of Pass 2**: `5` is now in place.
 
----
 
 ### 🔄 Pass 3:
 - Compare 1 and 2 → No Swap  
@@ -49,7 +56,6 @@ Given the array:
 
 Since no swaps occurred, the array is sorted — algorithm finishes early.
 
----
 
 ## ✅ Final Output
 
