@@ -6,6 +6,7 @@ while (true)
 {
     Console.WriteLine("Choose an algorithm:");
     Console.WriteLine("1. Bubble Sort");
+    Console.WriteLine("2. Insertion Sort");
     Console.WriteLine("0. Exit");
 
     Console.Write("Enter your choice: ");
@@ -17,6 +18,9 @@ while (true)
         case "1":
             RunBubbleSort();
             break;
+        case "2":
+            RunInsertionSort();
+            break;
         case "0":
             return;
         default:
@@ -25,6 +29,17 @@ while (true)
     }
 
     Console.WriteLine("\n---\n");
+}
+
+void RunInsertionSort()
+{
+    int[] input = GetInputArray();
+    Console.WriteLine("\nExecuting Insertion Sort...\n");
+
+    InsertionSort.Sort(input);
+
+    Console.WriteLine("\nSorted Result:");
+    Console.WriteLine(string.Join(", ", input));
 }
 
 static void RunBubbleSort()
