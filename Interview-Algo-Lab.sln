@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.14.36221.1 d17.14
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Algorithms.Core", "Algorithms.Core\Algorithms.Core.csproj", "{2780F370-7A47-4A3B-816B-B95403ECEB4F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Algorithms.Core", "Algorithms\Algorithms.Core.csproj", "{2780F370-7A47-4A3B-816B-B95403ECEB4F}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Algorithms.Demo", "Algorithms.Demo\Algorithms.Demo.csproj", "{70E9A606-FF28-499D-87AC-6C55C0A04FB0}"
 EndProject
