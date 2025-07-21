@@ -3,8 +3,6 @@
 **Category**: Sorting  
 **Time Complexity**: O(n²)  
 **Space Complexity**: O(1)  
-**Stable**: ✅ Yes  
-**In-place**: ✅ Yes  
 **Best case (sorted array)**: O(n)
 
 ---
