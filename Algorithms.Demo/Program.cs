@@ -1,4 +1,5 @@
 ﻿using Algorithms.Core.Searching;
+using Algorithms.Core.Searching.LinearSearch;
 using Algorithms.Core.Sorting;
 
 Console.WriteLine("=== Algorithm Demo ===\n");
@@ -9,6 +10,7 @@ while (true)
     Console.WriteLine("1. Bubble Sort");
     Console.WriteLine("2. Insertion Sort");
     Console.WriteLine("3. Binary Search");
+    Console.WriteLine("4. Linear Search");
     Console.WriteLine("0. Exit");
 
     Console.Write("Enter your choice: ");
@@ -25,6 +27,9 @@ while (true)
             break;
         case "3":
             RunBinarySearch();
+            break;
+        case "4":
+            RunLinearSearch();
             break;
         case "0":
             return;
@@ -69,6 +74,21 @@ void RunBinarySearch()
     Console.WriteLine($"\nSearching for target: {target}\n");
 
     int index = BinarySearch.Search(input, target);
+
+    if (index != -1)
+        Console.WriteLine($"\nTarget {target} found at index {index}.");
+    else
+        Console.WriteLine($"\nTarget {target} not found.");
+}
+
+void RunLinearSearch()
+{
+    int[] input = GetInputArray();
+
+    int target = GetTargetValue(input);
+    Console.WriteLine($"\nSearching for target: {target}\n");
+
+    int index = LinearSearch.Search(input, target);
 
     if (index != -1)
         Console.WriteLine($"\nTarget {target} found at index {index}.");
