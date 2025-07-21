@@ -70,6 +70,4 @@ Think of looking up a word in a dictionary. You don’t check each page one by o
 ## 🔗 Related Topics
 
 - Linear Search  
-- Interpolation Search  
 - Binary Search Tree  
-- Jump Search
