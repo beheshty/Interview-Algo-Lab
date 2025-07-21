@@ -7,7 +7,7 @@
 ---
 
 ## 💡 Description
-The algorithm works by taking one element from the unsorted part of the list and "inserting" it into its correct position in the already sorted part. It's similar to how many people sort a hand of playing cards. 🃏
+The algorithm works by taking one element from the unsorted part of the list and "inserting" it into its correct position in the already sorted part. It's similar to how many people sort a hand of playing cards.
 
 1. Start with the second element of the array (the first element is considered a sorted sub-array of one).
 2. Select this element and store it as the key.
