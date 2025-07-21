@@ -8,7 +8,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Algorithms.Core\Algorithms.Core.csproj" />
+    <ProjectReference Include="..\Algorithms\Algorithms.Core.csproj" />
   </ItemGroup>
 
 </Project>
