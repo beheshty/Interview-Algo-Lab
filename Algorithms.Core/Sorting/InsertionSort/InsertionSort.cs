@@ -2,6 +2,11 @@
 {
     public static class InsertionSort
     {
+        /// <summary>
+        /// Sorts the input array in ascending order using Insertion Sort
+        /// Time Complexity: O(n^2)
+        /// Space Complexity: O(1)
+        /// </summary>
         public static void Sort(int[] array)
         {
             Console.WriteLine("Initial array: " + string.Join(", ", array));

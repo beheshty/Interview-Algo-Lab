@@ -1,4 +1,5 @@
-﻿using Algorithms.Core.Sorting;
+﻿using Algorithms.Core.Searching;
+using Algorithms.Core.Sorting;
 
 Console.WriteLine("=== Algorithm Demo ===\n");
 
@@ -7,6 +8,7 @@ while (true)
     Console.WriteLine("Choose an algorithm:");
     Console.WriteLine("1. Bubble Sort");
     Console.WriteLine("2. Insertion Sort");
+    Console.WriteLine("3. Binary Search");
     Console.WriteLine("0. Exit");
 
     Console.Write("Enter your choice: ");
@@ -21,6 +23,9 @@ while (true)
         case "2":
             RunInsertionSort();
             break;
+        case "3":
+            RunBinarySearch();
+            break;
         case "0":
             return;
         default:
@@ -28,7 +33,7 @@ while (true)
             break;
     }
 
-    Console.WriteLine("\n---\n");
+    Console.WriteLine("\n------\n");
 }
 
 void RunInsertionSort()
@@ -51,6 +56,24 @@ static void RunBubbleSort()
 
     Console.WriteLine("\nSorted Result:");
     Console.WriteLine(string.Join(", ", input));
+}
+
+void RunBinarySearch()
+{
+    int[] input = GetInputArray();
+    Array.Sort(input); // Binary Search needs sorted array
+    Console.WriteLine("\nSorted Input for Binary Search:");
+    Console.WriteLine(string.Join(", ", input));
+
+    int target = GetTargetValue(input);
+    Console.WriteLine($"\nSearching for target: {target}\n");
+
+    int index = BinarySearch.Search(input, target);
+
+    if (index != -1)
+        Console.WriteLine($"\nTarget {target} found at index {index}.");
+    else
+        Console.WriteLine($"\nTarget {target} not found.");
 }
 
 static int[] GetInputArray()
@@ -111,4 +134,36 @@ static int[] GenerateRandomArray()
     Console.WriteLine(string.Join(", ", result));
 
     return result;
+}
+
+int GetTargetValue(int[] input)
+{
+    Console.WriteLine("\nChoose target input:");
+    Console.WriteLine("1. Manual input");
+    Console.WriteLine("2. Pick random value from the array");
+
+    Console.Write("Enter your choice: ");
+    string choice = Console.ReadLine();
+
+    if (choice == "1")
+    {
+        Console.Write("Enter an integer to search: ");
+        if (int.TryParse(Console.ReadLine(), out int manualTarget))
+        {
+            return manualTarget;
+        }
+        else
+        {
+            Console.WriteLine("Invalid input. Defaulting to first element.");
+            return input[0];
+        }
+    }
+    else
+    {
+        Random rand = new();
+        int randomIndex = rand.Next(0, input.Length);
+        int randomTarget = input[randomIndex];
+        Console.WriteLine($"Random target selected: {randomTarget}");
+        return randomTarget;
+    }
 }
