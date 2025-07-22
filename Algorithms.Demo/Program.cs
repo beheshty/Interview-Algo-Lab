@@ -9,8 +9,9 @@ while (true)
     Console.WriteLine("Choose an algorithm:");
     Console.WriteLine("1. Bubble Sort");
     Console.WriteLine("2. Insertion Sort");
-    Console.WriteLine("3. Binary Search");
-    Console.WriteLine("4. Linear Search");
+    Console.WriteLine("3. Merge Sort");
+    Console.WriteLine("4. Binary Search");
+    Console.WriteLine("5. Linear Search");
     Console.WriteLine("0. Exit");
 
     Console.Write("Enter your choice: ");
@@ -26,9 +27,12 @@ while (true)
             RunInsertionSort();
             break;
         case "3":
-            RunBinarySearch();
+            RunMergeSort();
             break;
         case "4":
+            RunBinarySearch();
+            break;
+        case "5":
             RunLinearSearch();
             break;
         case "0":
@@ -94,6 +98,17 @@ void RunLinearSearch()
         Console.WriteLine($"\nTarget {target} found at index {index}.");
     else
         Console.WriteLine($"\nTarget {target} not found.");
+}
+
+void RunMergeSort()
+{
+    int[] input = GetInputArray();
+    Console.WriteLine("\nExecuting Merge Sort...\n");
+
+    MergeSort.Sort(input);
+
+    Console.WriteLine("\nSorted Result:");
+    Console.WriteLine(string.Join(", ", input));
 }
 
 static int[] GetInputArray()
