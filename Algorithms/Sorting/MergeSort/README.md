@@ -60,4 +60,3 @@ Imagine you're a librarian with a huge, messy pile of returned books to put back
 ## 🔗 Related Topics
 
 -   Quicksort
--   Divide and Conquer
