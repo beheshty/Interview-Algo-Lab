@@ -10,8 +10,9 @@ while (true)
     Console.WriteLine("1. Bubble Sort");
     Console.WriteLine("2. Insertion Sort");
     Console.WriteLine("3. Merge Sort");
-    Console.WriteLine("4. Binary Search");
-    Console.WriteLine("5. Linear Search");
+    Console.WriteLine("4. Quick Sort");
+    Console.WriteLine("5. Binary Search");
+    Console.WriteLine("6. Linear Search");
     Console.WriteLine("0. Exit");
 
     Console.Write("Enter your choice: ");
@@ -30,9 +31,12 @@ while (true)
             RunMergeSort();
             break;
         case "4":
-            RunBinarySearch();
+            RunQuickSort();
             break;
         case "5":
+            RunBinarySearch();
+            break;
+        case "6":
             RunLinearSearch();
             break;
         case "0":
@@ -106,6 +110,17 @@ void RunMergeSort()
     Console.WriteLine("\nExecuting Merge Sort...\n");
 
     MergeSort.Sort(input);
+
+    Console.WriteLine("\nSorted Result:");
+    Console.WriteLine(string.Join(", ", input));
+}
+
+void RunQuickSort()
+{
+    int[] input = GetInputArray();
+    Console.WriteLine("\nExecuting Quick Sort...\n");
+
+    QuickSort.Sort(input);
 
     Console.WriteLine("\nSorted Result:");
     Console.WriteLine(string.Join(", ", input));
