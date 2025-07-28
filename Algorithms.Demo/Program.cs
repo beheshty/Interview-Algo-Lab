@@ -1,6 +1,6 @@
-﻿using Algorithms.Core.DataStructures;
+﻿using Algorithms.Core.DataStructures.LinkedList;
+using Algorithms.Core.DataStructures.Stack;
 using Algorithms.Core.Searching;
-using Algorithms.Core.Searching.LinearSearch;
 using Algorithms.Core.Sorting;
 
 Console.WriteLine("=== Algorithm Demo ===\n");
@@ -17,6 +17,7 @@ while (true)
     Console.WriteLine("6. Linear Search");
     Console.WriteLine("\n--- Data Structures ---");
     Console.WriteLine("7. LinkedList Demo");
+    Console.WriteLine("8. Stack Demo");
     Console.WriteLine("\n0. Exit");
 
     Console.Write("Enter your choice: ");
@@ -45,6 +46,9 @@ while (true)
             break;
         case "7": 
             RunLinkedListDemo();
+            break;
+        case "8": 
+            RunStackDemo();
             break;
         case "0":
             return;
@@ -169,6 +173,52 @@ void RunLinkedListDemo()
             default:
                 Console.WriteLine("Invalid choice. Please try again.");
                 break;
+        }
+        Console.WriteLine();
+    }
+}
+
+void RunStackDemo()
+{
+    Stack stack = new Stack();
+
+    while (true)
+    {
+        Console.WriteLine("--- Current Stack State ---");
+        stack.Display();
+        Console.WriteLine("---------------------------");
+        Console.WriteLine("Choose an operation:");
+        Console.WriteLine("1. Push");
+        Console.WriteLine("2. Pop");
+        Console.WriteLine("3. Peek");
+        Console.WriteLine("4. Back to Main Menu");
+        Console.Write("Enter your choice: ");
+        string choice = Console.ReadLine() ?? "";
+
+        try
+        {
+            switch (choice)
+            {
+                case "1":
+                    int valPush = GetNumberInput("Enter a value to push: ");
+                    stack.Push(valPush);
+                    break;
+                case "2":
+                    stack.Pop();
+                    break;
+                case "3":
+                    stack.Peek();
+                    break;
+                case "4":
+                    return; // Exit to main menu
+                default:
+                    Console.WriteLine("Invalid choice. Please try again.");
+                    break;
+            }
+        }
+        catch (InvalidOperationException ex)
+        {
+            Console.WriteLine($"Error: {ex.Message}");
         }
         Console.WriteLine();
     }

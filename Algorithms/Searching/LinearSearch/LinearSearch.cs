@@ -1,5 +1,5 @@
 ﻿
-namespace Algorithms.Core.Searching.LinearSearch
+namespace Algorithms.Core.Searching
 {
     public static class LinearSearch
     {
