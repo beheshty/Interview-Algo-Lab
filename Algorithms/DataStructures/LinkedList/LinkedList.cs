@@ -1,5 +1,6 @@
 ﻿
-namespace Algorithms.Core.DataStructures
+
+namespace Algorithms.Core.DataStructures.LinkedList
 {
     public class LinkedList
     {
