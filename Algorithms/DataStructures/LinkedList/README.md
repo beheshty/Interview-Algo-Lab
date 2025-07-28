@@ -1,8 +1,8 @@
 ﻿# 🔗 Linked List
 
-**Category**: Data Structure
-**Time Complexity**: Access: $O(n)$ | Insertion/Deletion (at ends): $O(1)$
-**Space Complexity**: $O(n)$
+**Category**: Data Structure  
+**Time Complexity**: Access: $O(n)$ | Insertion/Deletion (at ends): $O(1)$  
+**Space Complexity**: $O(n)$  
 
 ---
 
