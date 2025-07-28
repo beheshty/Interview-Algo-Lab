@@ -1,4 +1,5 @@
-﻿using Algorithms.Core.Searching;
+﻿using Algorithms.Core.DataStructures;
+using Algorithms.Core.Searching;
 using Algorithms.Core.Searching.LinearSearch;
 using Algorithms.Core.Sorting;
 
@@ -6,14 +7,17 @@ Console.WriteLine("=== Algorithm Demo ===\n");
 
 while (true)
 {
-    Console.WriteLine("Choose an algorithm:");
+    Console.WriteLine("--- Sorting Algorithms ---");
     Console.WriteLine("1. Bubble Sort");
     Console.WriteLine("2. Insertion Sort");
     Console.WriteLine("3. Merge Sort");
     Console.WriteLine("4. Quick Sort");
+    Console.WriteLine("\n--- Searching Algorithms ---");
     Console.WriteLine("5. Binary Search");
     Console.WriteLine("6. Linear Search");
-    Console.WriteLine("0. Exit");
+    Console.WriteLine("\n--- Data Structures ---");
+    Console.WriteLine("7. LinkedList Demo");
+    Console.WriteLine("\n0. Exit");
 
     Console.Write("Enter your choice: ");
     string choice = Console.ReadLine();
@@ -38,6 +42,9 @@ while (true)
             break;
         case "6":
             RunLinearSearch();
+            break;
+        case "7": 
+            RunLinkedListDemo();
             break;
         case "0":
             return;
@@ -124,6 +131,47 @@ void RunQuickSort()
 
     Console.WriteLine("\nSorted Result:");
     Console.WriteLine(string.Join(", ", input));
+}
+
+void RunLinkedListDemo()
+{
+    LinkedList list = new LinkedList();
+
+    while (true)
+    {
+        Console.WriteLine("--- Current LinkedList State ---");
+        list.Display();
+        Console.WriteLine("--------------------------------");
+        Console.WriteLine("Choose an operation:");
+        Console.WriteLine("1. Add First");
+        Console.WriteLine("2. Add Last");
+        Console.WriteLine("3. Remove");
+        Console.WriteLine("4. Back to Main Menu");
+        Console.Write("Enter your choice: ");
+        string choice = Console.ReadLine() ?? "";
+
+        switch (choice)
+        {
+            case "1":
+                int valFirst = GetNumberInput("Enter a value to add to the front: ");
+                list.AddFirst(valFirst);
+                break;
+            case "2":
+                int valLast = GetNumberInput("Enter a value to add to the end: ");
+                list.AddLast(valLast);
+                break;
+            case "3":
+                int valRemove = GetNumberInput("Enter a value to remove: ");
+                list.Remove(valRemove);
+                break;
+            case "4":
+                return; // Exit to main menu
+            default:
+                Console.WriteLine("Invalid choice. Please try again.");
+                break;
+        }
+        Console.WriteLine();
+    }
 }
 
 static int[] GetInputArray()
@@ -215,5 +263,21 @@ int GetTargetValue(int[] input)
         int randomTarget = input[randomIndex];
         Console.WriteLine($"Random target selected: {randomTarget}");
         return randomTarget;
+    }
+}
+
+int GetNumberInput(string prompt)
+{
+    while (true)
+    {
+        Console.Write(prompt);
+        if (int.TryParse(Console.ReadLine(), out int value))
+        {
+            return value;
+        }
+        else
+        {
+            Console.WriteLine("Invalid input. Please enter an integer.");
+        }
     }
 }
