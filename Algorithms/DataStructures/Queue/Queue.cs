@@ -50,6 +50,7 @@
             if (_first == null)
             {
                 Console.WriteLine("Cannot dequeue from an empty queue.");
+                return 0;
             }
 
             int data = _first.Data; // Get the data from the first element.
@@ -75,6 +76,7 @@
             if (_first == null)
             {
                 Console.WriteLine("Cannot peek an empty queue.");
+                return 0;
             }
 
             int data = _first.Data;

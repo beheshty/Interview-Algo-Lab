@@ -38,6 +38,7 @@ namespace Algorithms.Core.DataStructures.Stack
             if (_top == null)
             {
                 Console.WriteLine($"Cannot pop from an empty stack.");
+                return 0;
             }
 
             int data = _top.Data; // Get the data from the top element
@@ -57,6 +58,7 @@ namespace Algorithms.Core.DataStructures.Stack
             if (_top == null)
             {
                 Console.WriteLine($"Cannot peek an empty stack.");
+                return 0;
             }
 
             int data = _top.Data;
