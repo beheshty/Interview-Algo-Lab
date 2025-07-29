@@ -1,41 +1,42 @@
-﻿using Algorithms.Core.DataStructures.LinkedList;
+﻿using Algorithms.Core.DataStructures.Queue;
 using Algorithms.Demo.Helpers;
 
 namespace Algorithms.Demo.Demos
 {
-    public static class LinkedListDemo
+    public static class QueueDemo
     {
         public static void Run()
         {
-            var list = new LinkedList();
+            Queue queue = new Queue();
 
             while (true)
             {
-                Console.WriteLine("--- Current LinkedList State ---");
-                list.Display();
-                Console.WriteLine("--------------------------------");
-
+                Console.WriteLine("--- Current Queue State ---");
+                queue.Display();
+                Console.WriteLine("---------------------------");
                 Console.WriteLine("Choose an operation:");
-                Console.WriteLine("1. Add First");
-                Console.WriteLine("2. Add Last");
-                Console.WriteLine("3. Remove");
+                Console.WriteLine("1. Enqueue (add to back)");
+                Console.WriteLine("2. Dequeue (remove from front)");
+                Console.WriteLine("3. Peek (view front)");
                 Console.WriteLine("4. Back to Main Menu");
-
+                Console.Write("Enter your choice: ");
                 string choice = Console.ReadLine() ?? "";
+
 
                 switch (choice)
                 {
                     case "1":
-                        list.AddFirst(InputHelper.GetNumber("Enter a value to add to the front: "));
+                        int valEnqueue = InputHelper.GetNumber("Enter a value to enqueue: ");
+                        queue.Enqueue(valEnqueue);
                         break;
                     case "2":
-                        list.AddLast(InputHelper.GetNumber("Enter a value to add to the end: "));
+                        queue.Dequeue();
                         break;
                     case "3":
-                        list.Remove(InputHelper.GetNumber("Enter a value to remove: "));
+                        queue.Peek();
                         break;
                     case "4":
-                        return;
+                        return; // Exit to main menu
                     default:
                         Console.WriteLine("Invalid choice. Please try again.");
                         break;

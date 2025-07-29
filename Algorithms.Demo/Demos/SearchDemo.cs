@@ -3,9 +3,9 @@ using Algorithms.Core.Searching;
 
 namespace Algorithms.Demo.Demos
 {
-    internal class SearchDemo
+    public static class SearchDemo
     {
-        public void PerformBinarySearch()
+        public static void PerformBinarySearch()
         {
             int[] input = InputHelper.GetArrayInput();
             Array.Sort(input);
@@ -20,7 +20,7 @@ namespace Algorithms.Demo.Demos
                 : $"\nTarget {target} not found.");
         }
 
-        public void PerformLinearSearch()
+        public static void PerformLinearSearch()
         {
             int[] input = InputHelper.GetArrayInput();
             int target = InputHelper.GetTargetValue(input);

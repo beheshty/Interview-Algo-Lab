@@ -33,12 +33,12 @@ namespace Algorithms.Core.DataStructures.Stack
         /// Removes and returns the element at the top of the stack.
         /// </summary>
         /// <returns>The element removed from the top of the stack.</returns>
-        /// <exception cref="InvalidOperationException">Thrown if the stack is empty.</exception>
         public int Pop()
         {
             if (_top == null)
             {
-                throw new InvalidOperationException("Cannot pop from an empty stack.");
+                Console.WriteLine($"Cannot pop from an empty stack.");
+                return 0;
             }
 
             int data = _top.Data; // Get the data from the top element
@@ -58,6 +58,7 @@ namespace Algorithms.Core.DataStructures.Stack
             if (_top == null)
             {
                 Console.WriteLine($"Cannot peek an empty stack.");
+                return 0;
             }
 
             int data = _top.Data;

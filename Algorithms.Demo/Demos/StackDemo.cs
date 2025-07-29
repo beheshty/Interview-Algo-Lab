@@ -3,9 +3,9 @@ using Algorithms.Demo.Helpers;
 
 namespace Algorithms.Demo.Demos
 {
-    internal class StackDemo
+    public static class StackDemo
     {
-        public void Run()
+        public static void Run()
         {
             var stack = new Stack();
 
@@ -23,29 +23,22 @@ namespace Algorithms.Demo.Demos
 
                 string choice = Console.ReadLine() ?? "";
 
-                try
+                switch (choice)
                 {
-                    switch (choice)
-                    {
-                        case "1":
-                            stack.Push(InputHelper.GetNumber("Enter a value to push: "));
-                            break;
-                        case "2":
-                            stack.Pop();
-                            break;
-                        case "3":
-                            stack.Peek();
-                            break;
-                        case "4":
-                            return;
-                        default:
-                            Console.WriteLine("Invalid choice. Please try again.");
-                            break;
-                    }
-                }
-                catch (InvalidOperationException ex)
-                {
-                    Console.WriteLine($"Error: {ex.Message}");
+                    case "1":
+                        stack.Push(InputHelper.GetNumber("Enter a value to push: "));
+                        break;
+                    case "2":
+                        stack.Pop();
+                        break;
+                    case "3":
+                        stack.Peek();
+                        break;
+                    case "4":
+                        return;
+                    default:
+                        Console.WriteLine("Invalid choice. Please try again.");
+                        break;
                 }
 
                 Console.WriteLine();

@@ -9,10 +9,6 @@ namespace Algorithms.Demo
 {
     public class MenuManager
     {
-        private readonly SortDemo sortDemo = new();
-        private readonly SearchDemo searchDemo = new();
-        private readonly LinkedListDemo linkedListDemo = new();
-        private readonly StackDemo stackDemo = new();
 
         public void Start()
         {
@@ -24,14 +20,15 @@ namespace Algorithms.Demo
 
                 switch (choice)
                 {
-                    case "1": sortDemo.ExecuteBubbleSort(); break;
-                    case "2": sortDemo.ExecuteInsertionSort(); break;
-                    case "3": sortDemo.ExecuteMergeSort(); break;
-                    case "4": sortDemo.ExecuteQuickSort(); break;
-                    case "5": searchDemo.PerformBinarySearch(); break;
-                    case "6": searchDemo.PerformLinearSearch(); break;
-                    case "7": linkedListDemo.Run(); break;
-                    case "8": stackDemo.Run(); break;
+                    case "1": SortDemo.ExecuteBubbleSort(); break;
+                    case "2": SortDemo.ExecuteInsertionSort(); break;
+                    case "3": SortDemo.ExecuteMergeSort(); break;
+                    case "4": SortDemo.ExecuteQuickSort(); break;
+                    case "5": SearchDemo.PerformBinarySearch(); break;
+                    case "6": SearchDemo.PerformLinearSearch(); break;
+                    case "7": LinkedListDemo.Run(); break;
+                    case "8": StackDemo.Run(); break;
+                    case "9": QueueDemo.Run(); break;
                     case "0": return;
                     default: Console.WriteLine("Invalid choice.\n"); break;
                 }
@@ -53,6 +50,7 @@ namespace Algorithms.Demo
             Console.WriteLine("\n--- Data Structures ---");
             Console.WriteLine("7. LinkedList Demo");
             Console.WriteLine("8. Stack Demo");
+            Console.WriteLine("9. Queue Demo");
             Console.WriteLine("\n0. Exit");
             Console.Write("Enter your choice: ");
         }
