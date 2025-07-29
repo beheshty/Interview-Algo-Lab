@@ -3,9 +3,9 @@ using Algorithms.Demo.Helpers;
 
 namespace Algorithms.Demo.Demos
 {
-    internal class SortDemo
+    public static class SortDemo
     {
-        public void ExecuteBubbleSort()
+        public static void ExecuteBubbleSort()
         {
             int[] input = InputHelper.GetArrayInput();
             Console.WriteLine("\nExecuting Bubble Sort...\n");
@@ -13,7 +13,7 @@ namespace Algorithms.Demo.Demos
             PrintResult(input);
         }
 
-        public void ExecuteInsertionSort()
+        public static void ExecuteInsertionSort()
         {
             int[] input = InputHelper.GetArrayInput();
             Console.WriteLine("\nExecuting Insertion Sort...\n");
@@ -21,7 +21,7 @@ namespace Algorithms.Demo.Demos
             PrintResult(input);
         }
 
-        public void ExecuteMergeSort()
+        public static void ExecuteMergeSort()
         {
             int[] input = InputHelper.GetArrayInput();
             Console.WriteLine("\nExecuting Merge Sort...\n");
@@ -29,7 +29,7 @@ namespace Algorithms.Demo.Demos
             PrintResult(input);
         }
 
-        public void ExecuteQuickSort()
+        public static void ExecuteQuickSort()
         {
             int[] input = InputHelper.GetArrayInput();
             Console.WriteLine("\nExecuting Quick Sort...\n");
@@ -37,7 +37,7 @@ namespace Algorithms.Demo.Demos
             PrintResult(input);
         }
 
-        private void PrintResult(int[] array)
+        private static void PrintResult(int[] array)
         {
             Console.WriteLine("\nSorted Result:");
             Console.WriteLine(string.Join(", ", array));
