@@ -87,5 +87,23 @@
                 Console.WriteLine("Invalid input. Please enter an integer.");
             }
         }
+
+        public static string GetString(string prompt)
+        {
+            string? input;
+            while (true)
+            {
+                Console.Write(prompt);
+                input = Console.ReadLine();
+                if (!string.IsNullOrWhiteSpace(input))
+                {
+                    return input;
+                }
+                else
+                {
+                    Console.WriteLine("Invalid input. Please enter some text.");
+                }
+            }
+        }
     }
 }
