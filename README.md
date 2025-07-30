@@ -34,10 +34,10 @@ This repository contains a collection of fundamental searching algorithms, sorti
 
 ### 🏗️ Data Structures
 
--   **[HashTable](https://github.com/beheshty/Interview-Algo-Lab/tree/master/DataStructures/HashTable)**: A data structure that maps keys to values for highly efficient lookup, implementing an associative array.
--   **[LinkedList](https://github.com/beheshty/Interview-Algo-Lab/tree/master/DataStructures/LinkedList)**: A linear collection of data elements where each element points to the next, allowing for efficient insertions and deletions.
--   **[Queue](https://github.com/beheshty/Interview-Algo-Lab/tree/master/DataStructures/Queue)**: A linear structure which follows a First-In-First-Out (FIFO) order.
--   **[Stack](https://github.com/beheshty/Interview-Algo-Lab/tree/master/DataStructures/Stack)**: A linear structure which follows a Last-In-First-Out (LIFO) order.
+-   **[HashTable](https://github.com/beheshty/Interview-Algo-Lab/tree/master/Algorithms/DataStructures/HashTable)**: A data structure that maps keys to values for highly efficient lookup, implementing an associative array.
+-   **[LinkedList](https://github.com/beheshty/Interview-Algo-Lab/tree/master/Algorithms/DataStructures/LinkedList)**: A linear collection of data elements where each element points to the next, allowing for efficient insertions and deletions.
+-   **[Queue](https://github.com/beheshty/Interview-Algo-Lab/tree/master/Algorithms/DataStructures/Queue)**: A linear structure which follows a First-In-First-Out (FIFO) order.
+-   **[Stack](https://github.com/beheshty/Interview-Algo-Lab/tree/master/Algorithms/DataStructures/Stack)**: A linear structure which follows a Last-In-First-Out (LIFO) order.
 
 ---
 
