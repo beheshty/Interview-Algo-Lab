@@ -12,21 +12,32 @@ Whether you're brushing up for a technical interview, studying data structures a
 
 ---
 
-## 📚 Algorithms Included
+## 📚 Algorithms & Data Structures Included
 
-This repository contains a collection of fundamental searching and sorting algorithms.
+This repository contains a collection of fundamental searching algorithms, sorting algorithms, and data structures.
 
 ### 🔍 Searching Algorithms
 
 -   **[Binary Search](https://github.com/beheshty/Interview-Algo-Lab/tree/master/Algorithms/Searching/BinarySearch)**: An efficient algorithm for finding an item from a **sorted** list of items.
 -   **[Linear Search](https://github.com/beheshty/Interview-Algo-Lab/tree/master/Algorithms/Searching/LinearSearch)**: A simple method that sequentially checks each element of a list until a match is found or the whole list has been searched.
 
+---
+
 ### 🧩 Sorting Algorithms
 
 -   **[Bubble Sort](https://github.com/beheshty/Interview-Algo-Lab/tree/master/Algorithms/Sorting/BubbleSort)**: A straightforward sorting algorithm that repeatedly steps through the list, compares adjacent elements and swaps them if they are in the wrong order.
 -   **[Insertion Sort](https://github.com/beheshty/Interview-Algo-Lab/tree/master/Algorithms/Sorting/InsertionSort)**: A simple sorting algorithm that builds the final sorted array one item at a time.
 -   **[Merge Sort](https://github.com/beheshty/Interview-Algo-Lab/tree/master/Algorithms/Sorting/MergeSort)**: A highly efficient, stable, comparison-based sorting algorithm using a divide and conquer strategy.
--   **[Quick Sort](https://github.com/beheshty/Interview-Algo-Lab/tree/master/Algorithms/Sorting/QuickSort)**: An efficient, in-place sorting algorithm that uses a divide and conquer approach. It is often faster in practice than other O(n log n) algorithms.
+-   **[Quick Sort](https://github.com/beheshty/Interview-Algo-Lab/tree/master/Algorithms/Sorting/QuickSort)**: An efficient, in-place sorting algorithm that uses a divide and conquer approach. It is often faster in practice than other $O(n \log n)$ algorithms.
+
+---
+
+### 🏗️ Data Structures
+
+-   **[HashTable](https://github.com/beheshty/Interview-Algo-Lab/tree/master/DataStructures/HashTable)**: A data structure that maps keys to values for highly efficient lookup, implementing an associative array.
+-   **[LinkedList](https://github.com/beheshty/Interview-Algo-Lab/tree/master/DataStructures/LinkedList)**: A linear collection of data elements where each element points to the next, allowing for efficient insertions and deletions.
+-   **[Queue](https://github.com/beheshty/Interview-Algo-Lab/tree/master/DataStructures/Queue)**: A linear structure which follows a First-In-First-Out (FIFO) order.
+-   **[Stack](https://github.com/beheshty/Interview-Algo-Lab/tree/master/DataStructures/Stack)**: A linear structure which follows a Last-In-First-Out (LIFO) order.
 
 ---
 
