@@ -29,6 +29,7 @@ namespace Algorithms.Demo
                     case "7": LinkedListDemo.Run(); break;
                     case "8": StackDemo.Run(); break;
                     case "9": QueueDemo.Run(); break;
+                    case "10": HashTableDemo.Run(); break;
                     case "0": return;
                     default: Console.WriteLine("Invalid choice.\n"); break;
                 }
@@ -51,6 +52,7 @@ namespace Algorithms.Demo
             Console.WriteLine("7. LinkedList Demo");
             Console.WriteLine("8. Stack Demo");
             Console.WriteLine("9. Queue Demo");
+            Console.WriteLine("10. Hash Table Demo");
             Console.WriteLine("\n0. Exit");
             Console.Write("Enter your choice: ");
         }
